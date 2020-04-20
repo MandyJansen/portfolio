@@ -1,0 +1,23 @@
+$noto-sans: 'Noto Sans', sans-serif;
+$playfair: 'Playfair Display', serif;
+
+$white: #fff;
+$green: #04544c;
+$blue: #23527c;
+$grey: #c9d0cf;
+
+@mixin hide-visually {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(100%);
+    height: 1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visually-hidden {
+    @include hide-visually;
+}
+
