@@ -67,7 +67,7 @@ li,
 }
 
 .a {
-    transition: background-size .5s ease-in-out;
+    transition: background-size .5s ease-in-out, color .5s ease-in-out;
     background: linear-gradient( to bottom, $green 0%, $green 100%);
     background-position: 0 100%;
     background-repeat: repeat-x;
