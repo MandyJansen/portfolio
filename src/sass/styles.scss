@@ -20,6 +20,7 @@ body {
 body {
     background: $white;
     font-family: $noto-sans;
+    color: $darkgrey;
 }
 
 .container--fullwidth {
@@ -44,16 +45,20 @@ li,
     }
 }
 
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
     font-family: $playfair;
 }
 
-.h2--big {
+.h2--large {
+    font-size: 6rem;
+}
+
+.h3--large {
     font-size: 3rem;
 }
 
@@ -272,14 +277,17 @@ li,
 .portfolioItem {
     position: relative;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: flex-start;
     margin-bottom: 1rem;
-    height: 100%;
     padding: 1.25rem 1.25rem 1.25rem 3rem;
     background: $grey;
     @media screen and (min-width: 768px) {
         margin-bottom: 0;
-        padding: 4rem 4rem 4rem 3rem;
+        padding: 4rem 4rem 0;
+        &:last-child {
+            padding-bottom: 4rem;
+        }
     }
     &__content {
         position: relative;
@@ -289,7 +297,7 @@ li,
             top: 0;
             left: -1.5rem;
             width: .2rem;
-            height: 50%;
+            height: 100%;
             background: $green;
         }
         @media screen and (min-width: 768px) {
@@ -298,12 +306,14 @@ li,
             justify-content: space-between;
         }
     }
-    .a--icon {
-        align-self: flex-start;
-    }
-    &__logo {
-        width: 150px;
-        height: 60px;
+    &__title {
+        a {
+            color: $darkgrey;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
     }
     &__skills {
         text-transform: uppercase;
