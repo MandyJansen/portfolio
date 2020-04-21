@@ -3,7 +3,6 @@
 @import "resets";
 @import "basscss-margin";
 @import "basscss-padding";
-@import "particles";
 @import "~aos/dist/aos.css";
 
 /* ==========================================================================
@@ -68,7 +67,7 @@ li,
 }
 
 .a {
-    transition: background-size .120s ease-in-out;
+    transition: background-size .5s ease-in-out;
     background: linear-gradient( to bottom, $green 0%, $green 100%);
     background-position: 0 100%;
     background-repeat: repeat-x;
@@ -319,7 +318,7 @@ li,
     position: relative;
     flex-direction: column;
     justify-content: space-between;
-    background: $green;
+    background: linear-gradient(to top, $green, $blue);
     color: $white;
     &__content {
         align-self: flex-start;
