@@ -5,6 +5,10 @@
 @import "basscss-padding";
 @import "~aos/dist/aos.css";
 
+
+.container {
+    border: 1px solid red;
+}
 /* ==========================================================================
 	General
    ========================================================================== */
@@ -56,6 +60,7 @@ h6, .h6 {
 
 .h2--large {
     font-size: 6rem;
+    line-height: .9;
 }
 
 .h3--large {
@@ -212,11 +217,15 @@ h6, .h6 {
 		transition: transform 1s cubic-bezier(1, .15, .25, 1);
 		font-family: $playfair;
 		line-height: 1.2;
-		color: transparent;
-		font-size: calc( 28px + (70 - 28) * ( (100vw - 320px) / ( 991 - 320)));
-		@media screen and (min-width: 992px) {
-			font-size: calc( 60px + (60 - 60) * ( (100vw - 992px) / ( 1200 - 992)));
-		}
+        color: transparent;
+        font-size: 8vw;
+        @media screen and (min-width: 800px) {
+            font-size: 7vw;
+        }
+		// font-size: calc( 28px + (70 - 28) * ( (100vw - 320px) / ( 991 - 320)));
+		// @media screen and (min-width: 992px) {
+		// 	font-size: calc( 60px + (60 - 60) * ( (100vw - 992px) / ( 1200 - 992)));
+		// }
 		&:before,
 		&:after {
 			content: attr(data-text);
