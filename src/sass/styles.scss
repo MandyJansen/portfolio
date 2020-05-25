@@ -24,11 +24,8 @@ body {
     color: $darkgrey;
 }
 
-.container--fullwidth {
-    @media screen and (min-width: 768px) {
-        width: 100%;
-        max-width: 1500px;
-    }
+.centeredBlock {
+    grid-column: 3 / 11;
 }
 
 /* ==========================================================================
@@ -299,6 +296,7 @@ h6, .h6 {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    grid-column: 1/13;
     margin-bottom: 1rem;
     padding: 1.25rem 1.25rem 1.25rem 3rem;
     background: $grey;
@@ -337,6 +335,16 @@ h6, .h6 {
     }
     &__skills {
         text-transform: uppercase;
+    }
+}
+
+.content {
+    &__title {
+        grid-column: 1 / 13;
+    }
+
+    &__block {
+        @extend .centeredBlock;
     }
 }
 
