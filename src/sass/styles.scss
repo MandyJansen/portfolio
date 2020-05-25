@@ -116,11 +116,6 @@ h6, .h6 {
 			background-repeat: no-repeat;
 			background-size: cover;
 		}
-		&_newWindow {
-			&::before {
-				background-image: url(../img/visit.svg);
-			}
-		}
 	}
 }
 
@@ -133,6 +128,8 @@ h6, .h6 {
     flex-direction: column;
     justify-content: center;
     height: 100vh;
+
+    background-image: url(/src/img/gebrdenobel.png);
     .container {
         @media screen and (max-width: 767px) {
             width: 100%;
