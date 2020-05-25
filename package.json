@@ -29,6 +29,7 @@
   "dependencies": {
     "aos": "^2.3.4",
     "basscss": "^8.0.2",
+    "normalize.css": "^8.0.1",
     "particles.js": "^2.0.0"
   }
 }
