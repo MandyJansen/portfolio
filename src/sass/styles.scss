@@ -84,12 +84,13 @@ h6, .h6 {
     background-repeat: repeat-x;
     background-size: 4px 4px;
     color: $green;
+    text-decoration: none;
     &:hover,
     &:focus {
         background-size: 4px 50px;
         text-decoration: none;
         color: $white;
-	}
+    }
 	&--white {
 		background: linear-gradient( to bottom, $white 0%, $white 100%);
 		background-position: 0 100%;
@@ -278,25 +279,6 @@ h6, .h6 {
    Portfolio
    ========================================================================== */
 
-.portfolio {
-    [class^="col-"] {
-        padding: 0;
-    }
-    .row {
-        @media screen and (min-width: 786px) {
-            display: flex;
-        }
-        &:last-child {
-            [class^="col-"] {
-                &:last-child {
-                    .portfolioItem {
-                        margin-bottom: 0;
-                    }
-                }
-            }
-        }
-    }
-}
 
 .portfolioItem {
     position: relative;
@@ -332,8 +314,8 @@ h6, .h6 {
         }
     }
     &__title {
-        a {
-            color: $darkgrey;
+        .a {
+            font-size: 3rem;
 
             &:hover {
                 text-decoration: none;
