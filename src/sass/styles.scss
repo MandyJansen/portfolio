@@ -1,3 +1,4 @@
+@import "grid";
 @import "layout";
 @import "variables";
 @import "resets";
@@ -129,8 +130,7 @@ h6, .h6 {
     justify-content: center;
     height: 100vh;
 
-    background-image: url(/src/img/gebrdenobel.png);
-    .container {
+    .container-grid {
         @media screen and (max-width: 767px) {
             width: 100%;
         }
@@ -146,9 +146,25 @@ h6, .h6 {
 
 .intro {
     align-self: center;
-    &__figure {
+
+    .intro__image {
+        grid-column: 1 / 13;
+
+        @media screen and (min-width: 992px) {
+            grid-column: 1 / 4;
+        }
+    }
+    
+    .intro__figure {
         display: inline-block;
         margin: 0 0 4rem 1rem;
+        width: 10rem;
+        @media screen and (min-width: 375px) {
+            max-width: 100%;
+        }
+        @media screen and (min-width: 992px) {
+            width: 18rem;
+        }
         &::before,
         &::after {
             content: '';
@@ -178,22 +194,24 @@ h6, .h6 {
             }
         }
     }
-    &__image {
+
+    .intro__img {
         position: relative;
-        width: 7.5rem;
-        @media screen and (min-width: 375px) {
-            max-width: 100%;
-        }
-        @media screen and (min-width: 992px) {
-            width: 15.625rem;
-        }
+        width: 100%;
     }
 }
 
 /* ==========================================================================
    Letter animation
    ========================================================================== */
-	
+.intro__text {
+    grid-column: 1 / 13;
+
+    @media screen and (min-width: 992px) {
+        grid-column: 5 / 13;
+    }
+}
+   
 .letterLine {
 	display: block;
 }
