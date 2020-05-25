@@ -1,4 +1,5 @@
 @import "~normalize.css/normalize.css";
+@import "media-queries";
 @import "grid";
 @import "variables";
 @import "resets";
@@ -26,11 +27,11 @@ body {
 
 .centeredBlock {
     grid-column: 1 / 13;
-    @media screen and (min-width: 768px) {
+    @include md {
         grid-column: 2 / 12;
     }
 
-    @media screen and (min-width: 992px) {
+    @include lg {
         grid-column: 3 / 11;
     }
 }
@@ -136,6 +137,7 @@ h6, .h6 {
     height: 100vh;
 
     .container-grid {
+        border: 1px solid red;
         @media screen and (max-width: 767px) {
             width: 100%;
         }
@@ -150,12 +152,12 @@ h6, .h6 {
    ========================================================================== */
 
 .intro {
-    align-self: center;
+    // align-self: center;
 
     .intro__image {
         grid-column: 1 / 13;
 
-        @media screen and (min-width: 992px) {
+        @include lg {
             grid-column: 1 / 4;
         }
     }
@@ -164,10 +166,10 @@ h6, .h6 {
         display: inline-block;
         margin: 0 0 4rem 1rem;
         width: 10rem;
-        @media screen and (min-width: 375px) {
+        @include xsm {
             max-width: 100%;
         }
-        @media screen and (min-width: 992px) {
+        @include lg {
             width: 18rem;
         }
         &::before,
@@ -183,7 +185,7 @@ h6, .h6 {
             left: -1rem;
             border-top: 3.125rem solid $green;
             border-right: 3.125rem solid transparent;
-            @media screen and (min-width: 992px) {
+            @include lg {
                 border-top: 5rem solid $green;
                 border-right: 5rem solid transparent;
             }
@@ -193,7 +195,7 @@ h6, .h6 {
             bottom: -1rem;
             border-bottom: 3.125rem solid $green;
             border-left: 3.125rem solid transparent;
-            @media screen and (min-width: 992px) {
+            @include lg {
                 border-bottom: 5rem solid $green;
                 border-left: 5rem solid transparent;
             }
@@ -212,7 +214,7 @@ h6, .h6 {
 .intro__text {
     grid-column: 1 / 13;
 
-    @media screen and (min-width: 992px) {
+    @include lg {
         grid-column: 5 / 13;
     }
 }
@@ -239,7 +241,7 @@ h6, .h6 {
         //     font-size: 7vw;
         // }
 		font-size: calc( 28px + (70 - 28) * ( (100vw - 320px) / ( 991 - 320)));
-		@media screen and (min-width: 992px) {
+		@include lg {
 			font-size: calc( 60px + (60 - 60) * ( (100vw - 992px) / ( 1200 - 992)));
 		}
 		&:before,
@@ -289,7 +291,7 @@ h6, .h6 {
     margin-bottom: 1rem;
     padding: 1.25rem 1.25rem 1.25rem 3rem;
     background: $grey;
-    @media screen and (min-width: 768px) {
+    @include md {
         margin-bottom: 0;
         padding: 4rem 4rem 0;
         &:last-child {
@@ -307,7 +309,7 @@ h6, .h6 {
             height: 100%;
             background: $green;
         }
-        @media screen and (min-width: 768px) {
+        @include md {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -381,7 +383,7 @@ h6, .h6 {
 .footer {
     text-align: center;
     color: $white;
-    @media screen and (min-width: 768px) {
+    @include md {
         [class^="col-"] {
             display: flex;
             justify-content: center;
@@ -398,7 +400,7 @@ h6, .h6 {
 		height: 3rem;
 		border-radius: 50%;
         background: $white;
-        @media screen and (min-width: 768px) {
+        @include md {
             top: -0.3125rem;
             left: 1rem;
         }

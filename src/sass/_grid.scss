@@ -10,13 +10,13 @@
         grid-gap: 0;
     }
 
-    @media (min-width: 768px) { 
+    @include md { 
         width: 750px;
     }
-    @media (min-width: 992px) {
+    @include lg {
         width: 970px;
     }
-    @media (min-width: 1200px) {
+    @include xlg {
         width: 1170px;
     }
 }
