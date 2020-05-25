@@ -136,12 +136,6 @@ h6, .h6 {
     justify-content: center;
     height: 100vh;
 
-    .container-grid {
-        border: 1px solid red;
-        @media screen and (max-width: 767px) {
-            width: 100%;
-        }
-    }
     &--half {
         height: 50vh;
     }
