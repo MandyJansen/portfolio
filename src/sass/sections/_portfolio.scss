@@ -2,12 +2,7 @@
    Portfolio
    ========================================================================== */
 
-
    .portfolioItem {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
     grid-column: 1/13;
     margin-bottom: 1rem;
     padding: 1.25rem 1.25rem 1.25rem 3rem;
@@ -30,32 +25,8 @@
             height: 100%;
             background: $green;
         }
-        @include md {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-    }
-    &__title {
-        .a {
-            font-size: 3rem;
-
-            &:hover {
-                text-decoration: none;
-            }
-        }
     }
     &__skills {
         text-transform: uppercase;
-    }
-}
-
-.content {
-    &__title {
-        grid-column: 1 / 13;
-    }
-
-    &__block {
-        @extend .centeredBlock;
     }
 }

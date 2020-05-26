@@ -17,10 +17,38 @@ body {
     color: $darkgrey;
 }
 
-.p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $playfair;
+    line-height: 1.5;
+}
+
+// largest font-size
+.t1 {
+    font-size: 4rem;
+}
+
+// second largest-font-size
+.t2 {
+    font-size: 3rem;
+}
+
+// third largest font-size
+.t3 {
+    font-size: 2rem;
+}
+
+.t-center {
+    text-align: center;
+}
+
+p,
 li,
-.a {
-    margin-bottom: 1rem;
+a {
     font-size: 1.25rem;
     line-height: 2.1875rem;
     &:last-child {
@@ -28,34 +56,16 @@ li,
     }
 }
 
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6 {
-    font-family: $playfair;
+p,
+ul {
+    margin-bottom: 2rem;
 }
 
-.h2--large {
-    font-size: 6rem;
-    line-height: .9;
+ul {
+    margin: 0 0 1rem 1.5rem;
 }
 
-.h3--large {
-    font-size: 3rem;
-}
-
-.ul {
-    margin-left: 1.5rem;
-}
-
-.centreTitle {
-    width: 100%;
-    text-align: center;
-}
-
-.a {
+a {
     transition: background-size .5s ease-in-out, color .5s ease-in-out;
     background: linear-gradient( to bottom, $green 0%, $green 100%);
     background-position: 0 100%;
@@ -69,36 +79,28 @@ h6, .h6 {
         text-decoration: none;
         color: $white;
     }
-    &--white {
-        background: linear-gradient( to bottom, $white 0%, $white 100%);
-        background-position: 0 100%;
-        background-repeat: repeat-x;
-        background-size: 4px 4px;
-        color: $white;
-        &:hover,
-        &:focus {
-            color: $green;
-        }
+}
+.a-white {
+    background: linear-gradient( to bottom, $white 0%, $white 100%);
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 4px 4px;
+    color: $white;
+    &:hover,
+    &:focus {
+        color: $green;
     }
-    &--nodeco {
-        background-size: 0 0;
-        &:hover &:focus {
-            background: linear-gradient( to bottom, $green 0%, $green 100%);
-        }
+}
+.a-nodeco {
+    background-size: 0 0;
+    &:hover &:focus {
+        background: linear-gradient( to bottom, $green 0%, $green 100%);
     }
-    &--icon {
-        position: relative;
-        margin-left: 1.5rem;
-        &::before {
-            content: '';
-            position: absolute;
-            left: -1.5rem;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 1.125rem;
-            height: 1.125rem;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-    }
+}
+
+
+// colours
+
+.white {
+    color: $white;
 }

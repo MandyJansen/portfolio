@@ -3,15 +3,13 @@
    ========================================================================== */
 
    .footer {
-    text-align: center;
-    color: $white;
     @include md {
         [class^="col-"] {
             display: flex;
             justify-content: center;
         }
     }
-    .p {
+    p {
         margin-bottom: 0;
     }
     &__icon {
@@ -23,7 +21,6 @@
 		border-radius: 50%;
         background: $white;
         @include md {
-            top: -0.3125rem;
             left: 1rem;
         }
         img {

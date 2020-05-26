@@ -2,7 +2,7 @@
 General
 ========================================================================== */
 
-.centeredBlock {
+.l-center-block {
     grid-column: 1 / 13;
     @include md {
         grid-column: 2 / 12;
