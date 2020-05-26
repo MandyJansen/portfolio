@@ -1,0 +1,132 @@
+/* ==========================================================================
+   Intro and letter animation
+   ========================================================================== */
+
+   .intro {
+    padding: 0 20px;
+
+    .intro__image {
+        grid-column: 1 / 13;
+
+        @include lg {
+            grid-column: 1 / 4;
+        }
+    }
+    
+    .intro__figure {
+        display: inline-block;
+        margin: 0 0 4rem 1rem;
+        width: 10rem;
+        @include xsm {
+            max-width: 100%;
+        }
+        @include lg {
+            width: 18rem;
+        }
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+			z-index: 2;
+			width: 0;
+            height: 0;
+        }
+        &::before {
+            top: -1rem;
+            left: -1rem;
+            border-top: 3.125rem solid $green;
+            border-right: 3.125rem solid transparent;
+            @include lg {
+                border-top: 5rem solid $green;
+                border-right: 5rem solid transparent;
+            }
+        }
+        &::after {
+            right: -1rem;
+            bottom: -1rem;
+            border-bottom: 3.125rem solid $green;
+            border-left: 3.125rem solid transparent;
+            @include lg {
+                border-bottom: 5rem solid $green;
+                border-left: 5rem solid transparent;
+            }
+        }
+    }
+
+    .intro__img {
+        position: relative;
+        width: 100%;
+    }
+}
+
+/* ==========================================================================
+   Letter animation
+   ========================================================================== */
+.intro__text {
+    grid-column: 1 / 13;
+
+    @include lg {
+        grid-column: 5 / 13;
+    }
+}
+   
+.letterLine {
+	display: block;
+}
+
+.letter {
+	display: inline-block;
+	overflow: hidden;
+	margin-left: -.25rem;
+	height: auto;
+	
+	&__element {
+		position: relative;
+		display: inline-block;
+		transition: transform 1s cubic-bezier(1, .15, .25, 1);
+		font-family: $playfair;
+		line-height: 1.2;
+        color: transparent;
+        font-size: 2rem;
+        // I want the font-size to go between being 34px on a 375px screen to 74px
+        @media screen and (min-width: 375px) {
+           font-size: calc(34px + 40 * ((100vw - 375px) / 750));
+        }
+        @media screen and (min-width: 992px) {
+            font-size: 4rem;
+        }
+        @media screen and (min-width: 1200px) {
+            font-size: 4.8125rem;
+        }
+		&:before,
+		&:after {
+			content: attr(data-text);
+			position: absolute;
+			top: 0;
+			height: 100%;
+			color: #333;
+		}
+		&:before {
+			left: 0;
+		}
+		&:after {
+			right: 120%;
+		}
+		.hover & {
+			transform: translateX(120%)
+		}
+	}
+
+	&--coloured {
+		.letter__element {
+			&::before,
+			&::after {
+				color: $green;
+			}
+		}
+	}
+	
+	&--inline {
+		display: inline;
+	}
+}

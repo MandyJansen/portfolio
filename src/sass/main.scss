@@ -1,0 +1,19 @@
+@import "~normalize.css/normalize.css";
+@import "basscss-margin";
+@import "basscss-padding";
+@import "~aos/dist/aos.css";
+
+@import "utilities/media-queries";
+@import "utilities/variables";
+
+@import "layout/grid";
+@import "layout/layout";
+@import "layout/footer";
+
+@import "base/resets";
+@import "base/typography";
+
+@import "sections/splash";
+@import "sections/intro";
+@import "sections/portfolio";
+@import "sections/contact";

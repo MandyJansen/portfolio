@@ -1,0 +1,61 @@
+/* ==========================================================================
+   Portfolio
+   ========================================================================== */
+
+
+   .portfolioItem {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    grid-column: 1/13;
+    margin-bottom: 1rem;
+    padding: 1.25rem 1.25rem 1.25rem 3rem;
+    background: $grey;
+    @include md {
+        margin-bottom: 0;
+        padding: 4rem 4rem 0;
+        &:last-child {
+            padding-bottom: 4rem;
+        }
+    }
+    &__content {
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -1.5rem;
+            width: .2rem;
+            height: 100%;
+            background: $green;
+        }
+        @include md {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+    &__title {
+        .a {
+            font-size: 3rem;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+    &__skills {
+        text-transform: uppercase;
+    }
+}
+
+.content {
+    &__title {
+        grid-column: 1 / 13;
+    }
+
+    &__block {
+        @extend .centeredBlock;
+    }
+}

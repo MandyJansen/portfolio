@@ -1,0 +1,104 @@
+/* ==========================================================================
+	Typography
+   ========================================================================== */
+
+
+html,
+body {
+    font-size: 14px;
+    @media screen and (min-width: 375px) {
+        font-size: 16px;
+    }
+}
+
+body {
+    background: $white;
+    font-family: $noto-sans;
+    color: $darkgrey;
+}
+
+.p,
+li,
+.a {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    line-height: 2.1875rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+    font-family: $playfair;
+}
+
+.h2--large {
+    font-size: 6rem;
+    line-height: .9;
+}
+
+.h3--large {
+    font-size: 3rem;
+}
+
+.ul {
+    margin-left: 1.5rem;
+}
+
+.centreTitle {
+    width: 100%;
+    text-align: center;
+}
+
+.a {
+    transition: background-size .5s ease-in-out, color .5s ease-in-out;
+    background: linear-gradient( to bottom, $green 0%, $green 100%);
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 4px 4px;
+    color: $green;
+    text-decoration: none;
+    &:hover,
+    &:focus {
+        background-size: 4px 50px;
+        text-decoration: none;
+        color: $white;
+    }
+    &--white {
+        background: linear-gradient( to bottom, $white 0%, $white 100%);
+        background-position: 0 100%;
+        background-repeat: repeat-x;
+        background-size: 4px 4px;
+        color: $white;
+        &:hover,
+        &:focus {
+            color: $green;
+        }
+    }
+    &--nodeco {
+        background-size: 0 0;
+        &:hover &:focus {
+            background: linear-gradient( to bottom, $green 0%, $green 100%);
+        }
+    }
+    &--icon {
+        position: relative;
+        margin-left: 1.5rem;
+        &::before {
+            content: '';
+            position: absolute;
+            left: -1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1.125rem;
+            height: 1.125rem;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+}

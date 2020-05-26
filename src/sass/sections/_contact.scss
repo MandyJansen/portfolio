@@ -1,0 +1,32 @@
+/* ==========================================================================
+   Contact
+   ========================================================================== */
+
+   .contact {
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+    background: linear-gradient(to top, $green, $blue);
+    color: $white;
+    &__content {
+        align-self: flex-start;
+        .h2 {
+            font-size: 2.5rem;
+        }
+    }
+    &__details {
+        text-align: center;
+        @media screen and (min-width: 480px) {
+            display: flex;
+            justify-content: center;
+        }
+        .p, 
+        .a {
+            margin: 0;
+            @media screen and (min-width: 480px) {
+                display: inline;
+                margin: 0 20px;
+            }
+        }
+    }
+}
