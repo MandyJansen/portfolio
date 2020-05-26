@@ -230,14 +230,17 @@ h6, .h6 {
 		font-family: $playfair;
 		line-height: 1.2;
         color: transparent;
-        // font-size: 8vw;
-        // @media screen and (min-width: 800px) {
-        //     font-size: 7vw;
-        // }
-		font-size: calc( 28px + (70 - 28) * ( (100vw - 320px) / ( 991 - 320)));
-		@include lg {
-			font-size: calc( 60px + (60 - 60) * ( (100vw - 992px) / ( 1200 - 992)));
-		}
+        font-size: 2rem;
+        // I want the font-size to go between being 34px on a 375px screen to 74px
+        @media screen and (min-width: 375px) {
+           font-size: calc(34px + 40 * ((100vw - 375px) / 750));
+        }
+        @media screen and (min-width: 992px) {
+            font-size: 4rem;
+        }
+        @media screen and (min-width: 1200px) {
+            font-size: 4.8125rem;
+        }
 		&:before,
 		&:after {
 			content: attr(data-text);
