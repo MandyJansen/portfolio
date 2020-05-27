@@ -2,19 +2,38 @@
    Slide menu
    ========================================================================== */
 
-	// 1. when .js-slideMenuButton is clicked
-	// add .has-activeMenu to body
+   var slideMenuButton = document.querySelector('.js-slideMenuButton');
+   var body = document.querySelector('body');
+   var hasActiveMenu = 'has-activeMenu';
+	
+ 	// 1. When .js-slideMenuButton is clicked, add .has-activeMenu to body
+	slideMenuButton.addEventListener('click', function() {
 
-	// 2. when clicked somewhere on the page or on close button:
-	// function: remove .has-activeMenu form body
+		// check to see if body already has .has-activeMenu, if so remove it when button gets clicked again to close the menu
+		if (body.classList.contains(hasActiveMenu)) {
+			removeHasActiveMenu();
+		// else add class .has-activeMenu to body 
+		} else {
+			body.classList.add(hasActiveMenu);
+		}
+	
+	});
+
+	// 2. when clicked anywhere on the page
+	window.addEventListener('click', function(e){
+		// that is NOT .js-slideMenuButton, remove .has-activeMenu from body
+		if (!slideMenuButton.contains(e.target)){
+			removeHasActiveMenu();
+	  	} 
+	})
 
 	// 3. when clicked on menu item, scroll to section
 	// function: remove .has-activeMenu from body
 
-	// make function for remove .has-activeMenu from body
-
-
-
+	//  Function to remove .has-activeMenu from body
+	function removeHasActiveMenu() {
+		body.classList.remove('has-activeMenu');
+	}
 
 /* ==========================================================================
    Intro letter animation
