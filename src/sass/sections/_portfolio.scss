@@ -3,9 +3,25 @@
    ========================================================================== */
 
    .portfolioItem {
+    position: relative;
     margin-bottom: 1rem;
     padding: 1.25rem 1.25rem 1.25rem 3rem;
     background: $grey;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 1.25rem; // same as top padding of .portfolioItem
+        left: 1.5rem;
+        width: .2rem;
+        height: calc(100% - 2.5rem); // same as top and bottom padding of .portfolioItem
+        background: $green;
+        @include md {
+            top: 4rem; // same as top padding of .portfolioItem
+            left: 2rem;
+            height: calc(100% - 4rem); // same as top padding of .portfolioItem
+        }
+    }
     @include md {
         margin-bottom: 0;
         padding: 4rem 4rem 0;
@@ -13,16 +29,13 @@
             padding-bottom: 4rem;
         }
     }
-    &__content {
-        position: relative;
+
+    &:last-child {
         &::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -1.5rem;
-            width: .2rem;
-            height: 100%;
-            background: $green;
+            height: calc(100% - 2.5rem); // same as top and bottom padding of .portfolioItem
+            @include md {
+                height: calc(100% - 8rem); // same as top and bottom padding of .portfolioItem
+            }
         }
     }
     &__skills {
