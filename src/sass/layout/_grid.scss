@@ -3,18 +3,18 @@
     margin-left: auto;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-gap: 15px;
+    grid-gap: 0.9375rem;
     &--no-gap {
         grid-gap: 0;
     }
 
     @include md { 
-        width: 750px;
+        width: 720px;
     }
     @include lg {
-        width: 970px;
+        width: 940px;
     }
     @include xlg {
-        width: 1170px;
+        width: 1140px;
     }
 }

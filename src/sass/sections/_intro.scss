@@ -3,7 +3,7 @@
    ========================================================================== */
 
    .intro {
-    padding: 0 20px;
+    padding: 0 0.9375rem;
 
     .intro__image {
         grid-column: 1 / 13;
@@ -88,12 +88,12 @@
 		line-height: 1.2;
         color: transparent;
         font-size: 2rem;
-        // I want the font-size to go between being 34px on a 375px screen to 74px
+        // I want the font-size to go between being 33px on a 375px screen to 74px
         @media screen and (min-width: 375px) {
-           font-size: calc(34px + 40 * ((100vw - 375px) / 750));
+           font-size: calc(33px + 40 * ((100vw - 375px) / 750));
         }
         @media screen and (min-width: 992px) {
-            font-size: 4rem;
+            font-size: 3.875rem;
         }
         @media screen and (min-width: 1200px) {
             font-size: 4.8125rem;

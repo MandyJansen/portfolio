@@ -4,8 +4,10 @@ General
 
 .l-center-block {
     grid-column: 1 / 13;
+    padding: 0 0.9375rem;
     @include md {
         grid-column: 2 / 12;
+        padding: 0;
     }
 
     @include lg {
