@@ -1,5 +1,26 @@
-// Letter animation
-var mobileDevices = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+/* ==========================================================================
+   Slide menu
+   ========================================================================== */
+
+	// 1. when .js-slideMenuButton is clicked
+	// add .has-activeMenu to body
+
+	// 2. when clicked somewhere on the page or on close button:
+	// function: remove .has-activeMenu form body
+
+	// 3. when clicked on menu item, scroll to section
+	// function: remove .has-activeMenu from body
+
+	// make function for remove .has-activeMenu from body
+
+
+
+
+/* ==========================================================================
+   Intro letter animation
+   ========================================================================== */
+
+   var mobileDevices = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
 var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
