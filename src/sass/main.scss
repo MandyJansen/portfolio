@@ -5,12 +5,16 @@
 @import "utilities/media-queries";
 @import "utilities/variables";
 
-@import "layout/grid";
-@import "layout/layout";
-@import "layout/footer";
-
 @import "base/resets";
 @import "base/typography";
+
+@import "layout/grid";
+@import "layout/layout";
+@import "layout/header";
+@import "layout/navigation";
+@import "layout/footer";
+
+@import "components/slidemenu";
 
 @import "sections/splash";
 @import "sections/intro";
