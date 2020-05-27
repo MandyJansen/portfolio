@@ -1,6 +1,5 @@
 @import "~normalize.css/normalize.css";
-@import "basscss-margin";
-@import "basscss-padding";
+
 @import "~aos/dist/aos.css";
 
 @import "utilities/media-queries";
@@ -17,3 +16,6 @@
 @import "sections/intro";
 @import "sections/portfolio";
 @import "sections/contact";
+
+@import "basscss-margin";
+@import "basscss-padding";

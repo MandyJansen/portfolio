@@ -1,20 +1,8 @@
 .l-grid {
-    margin-right: auto;
-    margin-left: auto;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 0.9375rem;
     &--no-gap {
         grid-gap: 0;
-    }
-
-    @include md { 
-        width: 720px;
-    }
-    @include lg {
-        width: 940px;
-    }
-    @include xlg {
-        width: 1140px;
     }
 }

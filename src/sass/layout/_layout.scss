@@ -1,16 +1,29 @@
-/* ==========================================================================
-General
-========================================================================== */
+.l-container {
+    padding: 0 0.9375rem;
+    @include md { 
+        margin: 0 auto;
+        width: 720px;
+        
+    }
+    @include lg {
+        width: 940px;
+    }
+    @include xlg {
+        width: 1140px;
+    }
+}
+
 
 .l-center-block {
-    grid-column: 1 / 13;
     padding: 0 0.9375rem;
+    
     @include md {
-        grid-column: 2 / 12;
+        margin: 0 auto;
         padding: 0;
+        width: 90%;
     }
 
     @include lg {
-        grid-column: 3 / 11;
+        width: 60%;
     }
 }
