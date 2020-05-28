@@ -3,6 +3,8 @@
    ========================================================================== */
 
    var slideMenuButton = document.querySelector('.js-slideMenuButton');
+   var slideNav = document.querySelector('.slideNav');
+   var navItem = document.querySelector('.js-navItem');
    var body = document.querySelector('body');
    var hasActiveMenu = 'has-activeMenu';
 	
@@ -12,6 +14,7 @@
 		// check to see if body already has .has-activeMenu, if so remove it when button gets clicked again to close the menu
 		if (body.classList.contains(hasActiveMenu)) {
 			removeHasActiveMenu();
+
 		// else add class .has-activeMenu to body 
 		} else {
 			body.classList.add(hasActiveMenu);
@@ -20,15 +23,23 @@
 	});
 
 	// 2. when clicked anywhere on the page
-	window.addEventListener('click', function(e){
-		// that is NOT .js-slideMenuButton, remove .has-activeMenu from body
-		if (!slideMenuButton.contains(e.target)){
+	window.addEventListener('click', function(e) {
+		// that is NOT .js-slideMenuButton or the slideMenu itself, remove .has-activeMenu from body
+		if (!slideMenuButton.contains(e.target) && !slideNav.contains(e.target) ){
 			removeHasActiveMenu();
 	  	} 
-	})
+	});
 
-	// 3. when clicked on menu item, scroll to section
-	// function: remove .has-activeMenu from body
+	// 3. Get all the links in the nav list
+	var navList = document.querySelector('.js-navigationList'),
+	 	navListItems = navList.getElementsByTagName('a');
+	
+	for (var i=0; i < navListItems.length; i++) {
+		// 4. When nav item gets clicked, close menu
+		navListItems[i].addEventListener('click', function() {
+			removeHasActiveMenu();
+		})
+	}
 
 	//  Function to remove .has-activeMenu from body
 	function removeHasActiveMenu() {
@@ -39,7 +50,7 @@
    Intro letter animation
    ========================================================================== */
 
-   var mobileDevices = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+var mobileDevices = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
 var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 

@@ -2,7 +2,7 @@
    Slide menu
    ========================================================================== */
 
-.slideMenu {
+.slideNav {
     position: fixed;
     top: 0;
     left: -100%;
@@ -15,5 +15,8 @@
 
     .has-activeMenu & {
         left: 0;
+    }
+    @include xsm {
+        width: 18.75rem;
     }
 }

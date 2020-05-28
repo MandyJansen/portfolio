@@ -22,15 +22,28 @@
 		<button class="header__button js-slideMenuButton">C</button>
 	</header>
 
-	<div class="slideMenu">
+	<div class="slideNav">
 		<nav>
 			<h2 class="visually-hidden">Navigation</h2>
-	
+			<ul class="js-navigationList">
+				<li class="js-navItem">
+					<a href="#intro" class="js-navItemLink">Intro</a>
+				</li>
+				<li class="js-navItem">
+					<a href="#portfolio" class="js-navItemLink">Portfolio</a>
+				</li>
+				<li class="js-navItem">
+					<a href="#about" class="js-navItemLink">About</a>
+				</li>
+				<li class="js-navItem">
+					<a href="#contact" class="js-navItemLink">Contact</a>
+				</li>
+			</ul>
 		</nav>
 	</div>
 	
 
-	<section class="splash">
+	<section class="splash" id="intro">
 		<h2 class="visually-hidden">Hi! My name is Mandy Jansen, a front-end developer from Delft, the Netherlands</h2>
 		<div class="intro l-container">
 			<div class="l-grid">
@@ -238,7 +251,7 @@
 		</div>
 	</section>
 
-	<section class="portfolio">
+	<section class="portfolio" id="portfolio">
 		<h2 class="t1 t-center mb3" data-aos="fade-up">Projects</h2>
 		<div class="l-container" data-aos="fade-zoom-in" data-aos-duration="1000">
 			<div class="portfolioItem">										<h3 class="mb3">
@@ -284,7 +297,7 @@
 		</div>
 	</section>
 
-	<section class="mt4 mb4">
+	<section class="mt4 mb4" id="about">
 		<h2 class="t1 t-center mb3" data-aos="fade-up">About me</h2>
 		<div class="l-container">
 			<div class="l-center-block" data-aos="fade-zoom-in">
@@ -312,7 +325,7 @@
 		</div>
 	</section>
 
-	<section class="contact splash splash--half mt4" >				
+	<section class="contact splash splash--half mt4" id="contact">				
 		<div class="l-center-block mt3" data-aos="fade-down">
 			<h2 class="t3 t-center mb2 white">Let's connect</h2>
 			<div class="t-center">

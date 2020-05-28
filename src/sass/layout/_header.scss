@@ -5,8 +5,9 @@
 .header {
     position: relative;
     &__button {
-        position: absolute;
+        position: fixed;
         top: 2rem;
         right: 2rem;
+        z-index: 10;
     }
 }
