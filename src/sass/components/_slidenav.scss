@@ -11,8 +11,7 @@
     z-index: 10;
     background-color: $white;
     box-shadow: 2px 0 6px rgba(0,0,0,.15);
-    transition: all 500ms cubic-bezier(0.250, 0.460, 0.450, 0.940); /* easeOutQuad  https://matthewlein.com/tools/ceaser */
-
+    @include transition-easeQuad;
     .has-activeMenu & {
         right: 4rem;
         padding-left: 4rem;

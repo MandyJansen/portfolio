@@ -12,8 +12,7 @@
         height: 1.25rem;
         width: 1.75rem;
         cursor: pointer;
-        // transition here
-
+        @include transition-ease;
         @include sm {
             top: 2rem;
             right: 2rem;
@@ -27,7 +26,7 @@
         width: 1.75rem;
         height: .1875rem;
         background: $green;
-        // transition here (make mixin)
+        @include transition-ease;
 
         &::before,
         &::after {
@@ -35,6 +34,7 @@
             content: '';
             height: .1875rem;
             background: $green;
+            @include transition-ease;
         }
         &::before {
             top: -.5rem;
@@ -44,6 +44,20 @@
         &::after {
             width: 1.25rem;
             top: .5rem;
+        }
+
+        .has-activeMenu & {
+            transform: rotate(720deg);
+            background: transparent;
+
+            &::before {
+                transform: rotate(45deg) translate(5px, 8px);
+            }
+
+            &::after {
+                width: 28px;
+                transform: rotate(-45deg) translate(3px, -7px);
+            }
         }
     }
 }
