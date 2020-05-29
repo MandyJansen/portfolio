@@ -1,8 +1,15 @@
+
+
+
+
+
+
 /* ==========================================================================
    Slide menu
    ========================================================================== */
 
    (function () {
+
 	var slideMenuButton = document.querySelector('.js-slideMenuButton'),
 	slideNav = document.querySelector('.slideNav'),
 	navItem = document.querySelector('.js-navItem'),
