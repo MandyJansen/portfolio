@@ -1,12 +1,14 @@
 /* ==========================================================================
-   Grid settings
+   Navigation
    ========================================================================== */
 
-.l-grid {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-gap: 0.9375rem;
-    &--no-gap {
-        grid-gap: 0;
-    }
+.mainNav {
+   ul {
+      list-style-type: none;
+      margin-left: 0;
+
+      li {
+         margin-bottom: 2rem;
+      }
+   }
 }

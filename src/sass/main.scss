@@ -4,13 +4,18 @@
 
 @import "utilities/media-queries";
 @import "utilities/variables";
-
-@import "layout/grid";
-@import "layout/layout";
-@import "layout/footer";
+@import "utilities/mixins";
 
 @import "base/resets";
 @import "base/typography";
+
+@import "layout/grid";
+@import "layout/layout";
+@import "layout/header";
+@import "layout/navigation";
+@import "layout/footer";
+
+@import "components/slidenav";
 
 @import "sections/splash";
 @import "sections/intro";

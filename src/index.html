@@ -18,7 +18,38 @@
 	<![endif]-->
 	<h1 class="visually-hidden">Mandy Jansen - Front-end developer</h1>
 
-	<section class="splash">
+	<header class="header">
+		<div class="header__button js-slideMenuButton">
+			<span class="header__burger js-hamburger"></span>
+		</div>
+	</header>
+
+	<div class="slideNav">
+		<div class="slideNav__content t-center">
+			<p class="slideNav__title t3">Mandy Jansen</p>
+			<p class="slideNav__subtitle">Front-end Developer</p>
+			<nav class="mainNav">
+				<h2 class="visually-hidden">Navigation</h2>
+				<ul class="js-navigationList">
+					<li class="js-navItem">
+						<a href="#intro" class="t3 js-navItemLink">Intro</a>
+					</li>
+					<li class="js-navItem">
+						<a href="#portfolio" class="t3 js-navItemLink">Portfolio</a>
+					</li>
+					<li class="js-navItem">
+						<a href="#about" class="t3 js-navItemLink">About</a>
+					</li>
+					<li class="js-navItem">
+						<a href="#contact" class="t3 js-navItemLink">Contact</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	
+
+	<section class="splash" id="intro">
 		<h2 class="visually-hidden">Hi! My name is Mandy Jansen, a front-end developer from Delft, the Netherlands</h2>
 		<div class="intro l-container">
 			<div class="l-grid">
@@ -226,7 +257,7 @@
 		</div>
 	</section>
 
-	<section class="portfolio">
+	<section class="portfolio" id="portfolio">
 		<h2 class="t1 t-center mb3" data-aos="fade-up">Projects</h2>
 		<div class="l-container" data-aos="fade-zoom-in" data-aos-duration="1000">
 			<div class="portfolioItem">										<h3 class="mb3">
@@ -272,7 +303,7 @@
 		</div>
 	</section>
 
-	<section class="mt4 mb4">
+	<section class="mt4 mb4" id="about">
 		<h2 class="t1 t-center mb3" data-aos="fade-up">About me</h2>
 		<div class="l-container">
 			<div class="l-center-block" data-aos="fade-zoom-in">
@@ -287,7 +318,7 @@
 					<li>Atom, Sublime, Visual Studio Code</li>
 					<li>Gulp, Grunt, Webpack</li>
 					<li>Sass, Less</li>
-					<li>BEM</li>
+					<li>BEM, Namespacing</li>
 					<li>Bootstrap</li>
 					<li>Umbraco CMS</li>
 					<li>Photoshop, Illustrator, Sketch, InVision</li>
@@ -300,7 +331,7 @@
 		</div>
 	</section>
 
-	<section class="contact splash splash--half mt4" >				
+	<section class="contact splash splash--half mt4" id="contact">				
 		<div class="l-center-block mt3" data-aos="fade-down">
 			<h2 class="t3 t-center mb2 white">Let's connect</h2>
 			<div class="t-center">
