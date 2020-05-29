@@ -36,11 +36,21 @@
 		navListItems = navList.getElementsByTagName('a');
 	
 	for (var i=0; i < navListItems.length; i++) {
+
+		// go to corresponding section (instead of smooth scroll)
+		// and so that it doesnt change the url
+
+		// remove .has-ActiveMenu class when it has reached section
+
+		// add active class to active section
+
 		// 4. When nav item gets clicked, close menu
 		navListItems[i].addEventListener('click', function() {
 			removeHasActiveMenu();
 		})
 	}
+
+	// add active state to menu item on scroll
 
 	//  Function to remove .has-activeMenu from body
 	function removeHasActiveMenu() {
