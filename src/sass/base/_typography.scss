@@ -65,41 +65,10 @@ ul {
 }
 
 a {
-    transition: background-size .5s ease-in-out, color .5s ease-in-out;
-    background: linear-gradient( to bottom, $green 0%, $green 100%);
-    background-position: 0 100%;
-    background-repeat: repeat-x;
-    background-size: 4px 4px;
-    color: $green;
-    text-decoration: none;
     &:hover,
     &:focus {
         background-size: 4px 50px;
         text-decoration: none;
         color: $white;
     }
-}
-.a-white {
-    background: linear-gradient( to bottom, $white 0%, $white 100%);
-    background-position: 0 100%;
-    background-repeat: repeat-x;
-    background-size: 4px 4px;
-    color: $white;
-    &:hover,
-    &:focus {
-        color: $green;
-    }
-}
-.a-nodeco {
-    background-size: 0 0;
-    &:hover &:focus {
-        background: linear-gradient( to bottom, $green 0%, $green 100%);
-    }
-}
-
-
-// colours
-
-.white {
-    color: $white;
 }
