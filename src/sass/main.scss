@@ -11,6 +11,17 @@
 
 @import "layout/grid";
 @import "layout/layout";
+@import "layout/header";
+@import "layout/navigation";
+@import "layout/footer";
+
+@import "components/slidenav";
+@import "components/revealer";
+
+@import "sections/splash";
+@import "sections/intro";
+@import "sections/portfolio";
+@import "sections/contact";
 
 @import "basscss-margin";
 @import "basscss-padding";

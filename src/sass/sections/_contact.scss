@@ -1,0 +1,18 @@
+/* ==========================================================================
+   Contact
+   ========================================================================== */
+
+   .contact {
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+    background: linear-gradient(to top, $green, $blue);
+    p, 
+    a {
+        margin: 0;
+        @media screen and (min-width: 480px) {
+            display: inline;
+            margin: 0 20px;
+        }
+    }
+}
